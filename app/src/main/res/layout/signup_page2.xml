@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Login">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView2"
+        android:layout_width="0dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="119dp"
+        android:src="@drawable/health"
+        app:layout_constraintBottom_toBottomOf="@+id/BloodA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnFinishSignUp"
+        android:layout_width="129dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Finish"
+        android:textColor="#ffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <EditText
+        android:id="@+id/inputAge"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="68dp"
+        android:background="@drawable/rounded_edit_text"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="  18"
+        android:inputType="number"
+        android:textColor="@color/black"
+        android:textColorHint="#664a3f"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:text="Please put your age"
+        android:textColor="#181838"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxDontKnow" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="30dp"
+        android:text="Please select your weight "
+        android:textColor="#181838"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/Less50KG"
+        app:layout_constraintStart_toStartOf="@+id/inputAge" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="16dp"
+        android:text="More than 50 KG"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnFinishSignUp"
+        app:layout_constraintEnd_toStartOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="81dp"
+        android:layout_marginBottom="67dp"
+        android:text="Less than 50 KG"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btnFinishSignUp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="16dp"
+        android:text="Please pick your blood type"
+        android:textColor="#181838"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/BloodA"
+        app:layout_constraintTop_toBottomOf="@+id/gifImageView2" />
+
+    <Button
+        android:id="@+id/BloodO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/roundedbutton"
+        android:text="O"
+        android:textColor="#ffff"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxDontKnow"
+        app:layout_constraintEnd_toEndOf="@+id/checkBoxDontKnow" />
+
+    <Button
+        android:id="@+id/BloodAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginBottom="21dp"
+        android:background="@drawable/roundedbutton"
+        android:text="AB"
+        android:textColor="#ffff"
+        app:layout_constraintBottom_toTopOf="@+id/BloodO"
+        app:layout_constraintStart_toEndOf="@+id/BloodA" />
+
+    <Button
+        android:id="@+id/BloodB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/roundedbutton"
+        android:text="B"
+        android:textColor="#ffff"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxDontKnow"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BloodA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:background="@drawable/roundedbutton"
+        android:text="A"
+        android:textColor="#ffff"
+        app:layout_constraintBaseline_toBaselineOf="@+id/BloodAB"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/BloodN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:background="@drawable/roundedbutton"
+        android:text="-"
+        android:textColor="#ffff"
+        app:layout_constraintStart_toStartOf="@+id/BloodP"
+        app:layout_constraintTop_toBottomOf="@+id/BloodP" />
+
+    <Button
+        android:id="@+id/BloodP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="37dp"
+        android:background="@drawable/roundedbutton"
+        android:text="+"
+        android:textColor="#ffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <CheckBox
+        android:id="@+id/checkBoxDontKnow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#64471e"
+        android:text="i Don’t know my blood type"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/BloodB"
+        app:layout_constraintStart_toEndOf="@+id/BloodB"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/Less50KG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:srcCompat="@drawable/w" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:srcCompat="@drawable/w" />
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/barourapp"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

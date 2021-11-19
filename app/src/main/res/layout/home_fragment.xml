@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <include
+            android:id="@+id/include4"
+            layout="@layout/barourapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="9dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/GreyCadreProfile"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/roundedcadre"
+            android:elevation="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/greyCadreProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgProfile" />
+
+        <ImageView
+            android:id="@+id/greyCadreProfile"
+            android:layout_width="0dp"
+            android:layout_height="219dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="200dp"
+            android:background="@drawable/roundedcadre"
+            android:elevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="147dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="42dp"
+            android:elevation="9dp"
+            android:src="@drawable/yassin"
+            app:civ_border_color="#FFF9F9"
+            app:civ_border_width="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/titleLastDonation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include4" />
+
+        <TextView
+            android:id="@+id/titleBloodType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="9dp"
+            android:text="Blood Type"
+            android:textColor="#b8a8a3"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/BloodType"
+            app:layout_constraintStart_toStartOf="@+id/GreyCadreProfile" />
+
+        <TextView
+            android:id="@+id/UserType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="8dp"
+            android:elevation="9dp"
+            android:text="User Type"
+            android:textColor="#b8a8a3"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/TypeUseris"
+            app:layout_constraintStart_toStartOf="@+id/imgProfile" />
+
+        <TextView
+            android:id="@+id/BloodType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="6dp"
+            android:elevation="9dp"
+            android:text="AB+"
+            android:textColor="#071e48"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/GreyCadreProfile"
+            app:layout_constraintEnd_toStartOf="@+id/TypeUseris"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/TypeUseris"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="51dp"
+            android:layout_marginBottom="6dp"
+            android:elevation="9dp"
+            android:text="Donor"
+            android:textColor="#071e48"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/GreyCadreProfile"
+            app:layout_constraintEnd_toStartOf="@+id/DateLastDonation"
+            app:layout_constraintStart_toEndOf="@+id/BloodType" />
+
+        <TextView
+            android:id="@+id/titleLastDonation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="37dp"
+            android:elevation="9dp"
+            android:text="Last donate"
+            android:textColor="#b8a8a3"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/greyCadreProfile"
+            app:layout_constraintStart_toStartOf="@+id/DateLastDonation" />
+
+        <TextView
+            android:id="@+id/DateLastDonation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="4dp"
+            android:elevation="9dp"
+            android:text="12/05/2020"
+            android:textColor="#071e48"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/GreyCadreProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/TypeUseris"
+            app:layout_constraintTop_toBottomOf="@+id/titleLastDonation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

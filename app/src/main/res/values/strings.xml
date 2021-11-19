@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">OneBlood</string>
+    <string name="DontHaveAccount">New to OneBlood? <font color='#FA181B'>Join Now</font></string>
+    <string name="Conditions">To register in the application as a donor.\n+The donor must be in good health and not suffer from any contagious diseases.\n+The age of the donor should be between 18-65 years.\n+The donor must weigh at least 50 kg.\n+The pulse should be between 50-100 per minute.\n+The average blood pressure is less than 120/80 mm Hg.\n</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="Edit"><font color='#FA181B'>Edit</font></string>
+
+    <string-array name="UserType">
+        <item>Donor</item>
+        <item>Needy</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".SignUpPage1">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="418dp"
+        android:layout_height="237dp"
+        android:layout_marginBottom="107dp"
+        android:src="@drawable/userlogin"
+        app:layout_constraintBottom_toTopOf="@+id/emailSignup"
+        app:layout_constraintTop_toBottomOf="@+id/include5"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-10dp" />
+
+    <EditText
+        android:id="@+id/passwordSignup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/rounded_edit_text"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="  Password"
+        android:inputType="textPassword"
+        android:maxLength="15"
+        android:textColor="@color/black"
+        android:textColorHint="#DADDE1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/LocationSignup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailSignup" />
+
+    <EditText
+        android:id="@+id/LocationSignup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_edit_text"
+        android:editable="false"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Location"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textColorHint="#DADDE1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnNextSignUp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordSignup" />
+
+    <EditText
+        android:id="@+id/emailSignup"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/rounded_edit_text"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="  Email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:textColorHint="#DADDE1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/passwordSignup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifImageView" />
+
+    <Button
+        android:id="@+id/btnNextSignUp"
+        android:layout_width="129dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/roundedbutton"
+        android:text="Next"
+        android:textColor="#ffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LocationSignup" />
+
+    <include
+        android:id="@+id/include5"
+        layout="@layout/barourapp"
+        android:layout_width="390dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/gifImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:text="Sign Up"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/emailSignup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
