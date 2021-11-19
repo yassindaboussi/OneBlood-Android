@@ -71,6 +71,7 @@ class MapFragment : Fragment() {
 
         getCurrentLocation()
 
+
     }
 
 
@@ -522,7 +523,7 @@ class MapFragment : Fragment() {
             }
         } else { // No cnx No Gps Sett Locations from DataBase //ToDo
             //Toast.makeText(this, "Need internet to share location", Toast.LENGTH_SHORT).show()
-            recylcerChampionAdapter = ChampionAdapter(MapListZarzis) //ToDo List Of all states
+            recylcerChampionAdapter = ChampionAdapter(MapListZarzis) //ToDo List Of states
             recylcerChampion.adapter = recylcerChampionAdapter
             recylcerChampion.layoutManager =
                 LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)

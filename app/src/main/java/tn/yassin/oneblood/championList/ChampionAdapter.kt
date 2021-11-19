@@ -3,6 +3,8 @@ package tn.esprit.leagueoflegendrecyclerview.championList
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ApplicationInfo
+import android.content.pm.PackageManager
 import android.graphics.Color
 import android.net.Uri
 import android.view.*
@@ -41,7 +43,7 @@ class ChampionAdapter(val championsList: MutableList<Champion>) :
         }
 
         holder.itemView.setOnClickListener { //Show Popup
-            PopUp(holder.itemView,nom,location,numero)
+            PopUp(holder.itemView, nom, location, numero)
 /*            val intent = Intent(holder.itemView.context, PopUP::class.java)
             intent.apply {
                 putExtra(Nom, nom)
@@ -54,7 +56,7 @@ class ChampionAdapter(val championsList: MutableList<Champion>) :
     }
 }
 
-fun PopUpDialog(context: Context,Nom: String,Location: String,Numero: String) {
+fun PopUpDialog(context: Context, Nom: String, Location: String, Numero: String) {
     val alertadd: AlertDialog.Builder = AlertDialog.Builder(context)
     val factory = LayoutInflater.from(context)
     val view: View = factory.inflate(R.layout.popupdialog, null)
@@ -70,11 +72,29 @@ fun PopUpDialog(context: Context,Nom: String,Location: String,Numero: String) {
     val LocationDialog = view.findViewById<Button>(R.id.MapDialog) as? Button
     LocationDialog?.setOnClickListener(object : View.OnClickListener {
         override fun onClick(view: View?) {
-            println("Maaaaaaaaaaaaaaaaaaaaaaapppppppppppppppppppppp")
-            val browserIntent = Intent(android.content.Intent.ACTION_VIEW, Uri.parse("google.navigation:q=$Nom+$Location"));
-            context.startActivity(browserIntent)
+            val ai: ApplicationInfo = context.getPackageManager().getApplicationInfo("com.google.android.apps.maps", 0)
+            val appStatus = ai.enabled
+
+            println("Maaaaaaaaaaaaaaaaaaaaapppppppppppppppppppppppppp")
+            if (isAppInstalled("com.google.android.apps.maps", context) && appStatus) { // Check if Google Map existe and not disabled
+                val browserIntent = Intent(
+                    android.content.Intent.ACTION_VIEW,
+                    Uri.parse("google.navigation:q=$Nom+$Location")
+                );
+                context.startActivity(browserIntent)
+            }
+            else
+            {
+                val browserIntent = Intent(
+                    android.content.Intent.ACTION_VIEW,
+                    Uri.parse("https://www.google.com/maps/place/$Nom+$Location/@36.8049507,10.1529202,16z/data=!4m9!1m2!2m1!1sbanque+du+sang!3m5!1s0x12fd339e90c9f481:0xd9b67502b8aeb544!8m2!3d36.8049507!4d10.1572976!15sCg5iYW5xdWUgZHUgc2FuZ5IBCmJsb29kX2Jhbms")
+                );
+                context.startActivity(browserIntent)
+            }
         }
     })
+
+
     val Nominpopup = view.findViewById<TextView>(R.id.Nominpopup) as? TextView
     val Locationinpopup = view.findViewById<TextView>(R.id.Locationinpopup) as? TextView
     val Numeroinpopup = view.findViewById<TextView>(R.id.Numeroinpopup) as? TextView
@@ -83,7 +103,17 @@ fun PopUpDialog(context: Context,Nom: String,Location: String,Numero: String) {
     Numeroinpopup?.text = Numero
 }
 
-fun PopUp(view: View,Nom: String,Location: String,Numero: String) {
-    PopUpDialog(view.context,Nom,Location,Numero)
+fun isAppInstalled(packageName: String, context: Context): Boolean {
+    return try {
+        val packageManager = context.packageManager
+        packageManager.getPackageInfo(packageName, 0)
+        true
+    } catch (e: PackageManager.NameNotFoundException) {
+        false
+    }
+}
+
+fun PopUp(view: View, Nom: String, Location: String, Numero: String) {
+    PopUpDialog(view.context, Nom, Location, Numero)
 }
 
