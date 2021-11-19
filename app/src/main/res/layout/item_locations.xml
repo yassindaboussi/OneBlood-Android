@@ -27,12 +27,12 @@
 
             <TextView
                 android:id="@+id/Nom"
-                android:layout_width="252dp"
+                android:layout_width="263dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="3dp"
                 android:text="Name : NAME_HERE"
                 android:textColor="#FFFFFF"
-                android:textSize="20sp"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -42,7 +42,7 @@
                 android:layout_margin="3dp"
                 android:text="Role : ROLE_HERE"
                 android:textColor="#FFFFFF"
-                android:textSize="14sp" />
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/Numero"

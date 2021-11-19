@@ -29,8 +29,10 @@ class Login : AppCompatActivity() {
                 val intent = Intent(this, Home::class.java).apply {
                 }
                 startActivity(intent)
+
            // }
         }
+
         btnSignUp.setOnClickListener {
             val intent = Intent(this, conditionsignup::class.java).apply {
             }

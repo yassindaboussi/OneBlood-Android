@@ -17,6 +17,7 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
 import android.os.Looper
+import android.preference.PreferenceManager
 import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
@@ -189,6 +190,12 @@ class SignUpPage1 : AppCompatActivity() {
                         println("cityName " + stateName)
 
                         LocationSignup.text = stateName
+
+                        val preferences = PreferenceManager.getDefaultSharedPreferences(this@SignUpPage1)
+                        val editor = preferences.edit()
+                        editor.putString("Name",stateName.toString())
+                        editor.apply()
+
                     }
                 }
             }, Looper.getMainLooper())

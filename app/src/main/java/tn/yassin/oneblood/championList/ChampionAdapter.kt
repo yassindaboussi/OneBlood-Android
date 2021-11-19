@@ -2,8 +2,11 @@ package tn.esprit.leagueoflegendrecyclerview.championList
 
 import android.app.AlertDialog
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.view.*
+import android.webkit.WebView
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -68,6 +71,8 @@ fun PopUpDialog(context: Context,Nom: String,Location: String,Numero: String) {
     LocationDialog?.setOnClickListener(object : View.OnClickListener {
         override fun onClick(view: View?) {
             println("Maaaaaaaaaaaaaaaaaaaaaaapppppppppppppppppppppp")
+            val browserIntent = Intent(android.content.Intent.ACTION_VIEW, Uri.parse("google.navigation:q=$Nom+$Location"));
+            context.startActivity(browserIntent)
         }
     })
     val Nominpopup = view.findViewById<TextView>(R.id.Nominpopup) as? TextView
