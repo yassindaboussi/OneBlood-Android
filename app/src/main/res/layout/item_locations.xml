@@ -32,7 +32,7 @@
                 android:layout_margin="3dp"
                 android:text="Name : NAME_HERE"
                 android:textColor="#FFFFFF"
-                android:textSize="17sp"
+                android:textSize="16.5sp"
                 android:textStyle="bold" />
 
             <TextView

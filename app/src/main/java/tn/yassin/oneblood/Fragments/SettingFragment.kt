@@ -2,6 +2,7 @@ package tn.yassin.oneblood.Fragments
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -80,8 +81,7 @@ class SettingFragment : Fragment() {
         val adapter =  ArrayAdapter.createFromResource(requireContext(), R.array.UserType, android.R.layout.simple_spinner_item)
 
         // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(
-            android.R.layout.simple_spinner_dropdown_item)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         // Apply the adapter to the spinner
         spinnerUserType?.adapter = adapter
 
@@ -92,8 +92,11 @@ class SettingFragment : Fragment() {
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
                 val item = parent?.getItemAtPosition(position).toString()
                 //..
+
             }
         }
+
+
 
 ///////////////////////
         return self
