@@ -1,14 +1,14 @@
 package tn.yassin.oneblood
 
 import android.os.Bundle
-import android.webkit.WebView
-import android.webkit.WebViewClient
 import android.widget.Button
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.*
 import kotlinx.android.synthetic.main.home.*
+import tn.yassin.oneblood.Fragments.HomeFragment
+import tn.yassin.oneblood.Fragments.MapFragment
+import tn.yassin.oneblood.Fragments.SearchFragment
+import tn.yassin.oneblood.Fragments.SettingFragment
 
 class Home : AppCompatActivity(){
     private lateinit var btnHome: Button

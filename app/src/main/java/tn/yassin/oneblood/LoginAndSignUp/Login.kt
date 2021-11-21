@@ -1,4 +1,4 @@
-package tn.yassin.oneblood
+package tn.yassin.oneblood.LoginAndSignUp
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,8 @@ import android.text.TextUtils
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.*
+import tn.yassin.oneblood.Home
+import tn.yassin.oneblood.R
 
 class Login : AppCompatActivity() {
     private lateinit var btnLogin: Button

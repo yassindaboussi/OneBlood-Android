@@ -1,9 +1,10 @@
-package tn.yassin.oneblood
+package tn.yassin.oneblood.LoginAndSignUp
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import tn.yassin.oneblood.R
 
 class ForgetPassword : AppCompatActivity() {
     private lateinit var btnContinue: Button
@@ -13,7 +14,7 @@ class ForgetPassword : AppCompatActivity() {
 
         btnContinue= findViewById(R.id.btnContinue)
         btnContinue.setOnClickListener{
-           val  intent  = Intent(this,Login::class.java).apply {
+           val  intent  = Intent(this, Login::class.java).apply {
            }
             startActivity(intent)
        }

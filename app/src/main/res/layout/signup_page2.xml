@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".Login">
+    tools:context=".LoginAndSignUp.Login">
 
 
     <pl.droidsonroids.gif.GifImageView

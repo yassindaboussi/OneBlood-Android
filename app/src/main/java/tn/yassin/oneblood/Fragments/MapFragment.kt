@@ -1,25 +1,16 @@
-package tn.yassin.oneblood
+package tn.yassin.oneblood.Fragments
 
 import android.Manifest
-import android.app.Dialog
 import android.content.Context
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.preference.PreferenceManager
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.WebView
-import android.webkit.WebViewClient
-import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import tn.esprit.leagueoflegendrecyclerview.championList.ChampionAdapter
-import tn.esprit.leagueoflegendrecyclerview.data.Champion
-import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.location.Address
 import android.location.Geocoder
@@ -27,13 +18,14 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
 import android.os.Looper
-import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
+import tn.esprit.leagueoflegendrecyclerview.data.Inofrmations
+import tn.yassin.oneblood.R
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -69,31 +61,31 @@ class MapFragment : Fragment() {
         println("My Position now ==>>> "+name)*/
 
 
-        getCurrentLocation()
+        //getCurrentLocation()
 
-
+        SetLocationUser()
     }
 
 
-//    fun SetLocationUser() {
-//        //check permission
-//        //check internet
-//        if (checkForInternet(requireContext())) { // There is cnx
-//            if (ContextCompat.checkSelfPermission(
-//                    requireContext(), android.Manifest.permission.ACCESS_FINE_LOCATION
-//                ) != PackageManager.PERMISSION_GRANTED
-//            ) {
-//                requestPermissions(
-//                    arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
-//                    REQUEST_PERMISSION_REQUEST_CODE
-//                )
-//            } else {
-//                getCurrentLocation()
-//            }
-//        } else { // No cnx
-//            //Toast.makeText(this, "Need internet to share location", Toast.LENGTH_SHORT).show()
-//        }
-//    }
+    fun SetLocationUser() {
+        //check permission
+        //check internet
+        if (checkForInternet(requireContext())) { // There is cnx
+            if (ContextCompat.checkSelfPermission(
+                    requireContext(), android.Manifest.permission.ACCESS_FINE_LOCATION
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                requestPermissions(
+                    arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
+                    REQUEST_PERMISSION_REQUEST_CODE
+                )
+            } else {
+                getCurrentLocation()
+            }
+        } else { // No cnx
+            //Toast.makeText(this, "Need internet to share location", Toast.LENGTH_SHORT).show()
+        }
+    }
 
     override fun onRequestPermissionsResult(
         requestCode: Int,
@@ -112,59 +104,59 @@ class MapFragment : Fragment() {
 
     private fun getCurrentLocation() {
 
-        var MapListTunis: MutableList<Champion> = ArrayList()
-        var MapListBizert: MutableList<Champion> = ArrayList()
-        var MapListBeja: MutableList<Champion> = ArrayList()
-        var MapListJendouba: MutableList<Champion> = ArrayList()
-        var MapListNebel: MutableList<Champion> = ArrayList()
-        var MapListZaghouan: MutableList<Champion> = ArrayList()
-        var MapListKef: MutableList<Champion> = ArrayList()
-        var MapListSiliana: MutableList<Champion> = ArrayList()
-        var MapListSousse: MutableList<Champion> = ArrayList()
-        var MapListKairouan: MutableList<Champion> = ArrayList()
-        var MapListKasserine: MutableList<Champion> = ArrayList()
-        var MapListSidiBouzid: MutableList<Champion> = ArrayList()
-        var MapListSfax: MutableList<Champion> = ArrayList()
-        var MapListGafsa: MutableList<Champion> = ArrayList()
-        var MapListTozeur: MutableList<Champion> = ArrayList()
-        var MapListGabes: MutableList<Champion> = ArrayList()
-        var MapListKebili: MutableList<Champion> = ArrayList()
-        var MapListTataouine: MutableList<Champion> = ArrayList()
-        var MapListMedenine: MutableList<Champion> = ArrayList()
-        var MapListDjerba: MutableList<Champion> = ArrayList()
-        var MapListZarzis: MutableList<Champion> = ArrayList()
+        var MapListTunis: MutableList<Inofrmations> = ArrayList()
+        var MapListBizert: MutableList<Inofrmations> = ArrayList()
+        var MapListBeja: MutableList<Inofrmations> = ArrayList()
+        var MapListJendouba: MutableList<Inofrmations> = ArrayList()
+        var MapListNebel: MutableList<Inofrmations> = ArrayList()
+        var MapListZaghouan: MutableList<Inofrmations> = ArrayList()
+        var MapListKef: MutableList<Inofrmations> = ArrayList()
+        var MapListSiliana: MutableList<Inofrmations> = ArrayList()
+        var MapListSousse: MutableList<Inofrmations> = ArrayList()
+        var MapListKairouan: MutableList<Inofrmations> = ArrayList()
+        var MapListKasserine: MutableList<Inofrmations> = ArrayList()
+        var MapListSidiBouzid: MutableList<Inofrmations> = ArrayList()
+        var MapListSfax: MutableList<Inofrmations> = ArrayList()
+        var MapListGafsa: MutableList<Inofrmations> = ArrayList()
+        var MapListTozeur: MutableList<Inofrmations> = ArrayList()
+        var MapListGabes: MutableList<Inofrmations> = ArrayList()
+        var MapListKebili: MutableList<Inofrmations> = ArrayList()
+        var MapListTataouine: MutableList<Inofrmations> = ArrayList()
+        var MapListMedenine: MutableList<Inofrmations> = ArrayList()
+        var MapListDjerba: MutableList<Inofrmations> = ArrayList()
+        var MapListZarzis: MutableList<Inofrmations> = ArrayList()
 
 
         MapListTunis.add(
-            Champion(
+            Inofrmations(
                 Nom = "Centre National de Transfusion Sanguine",
                 Location = "Djebel Lakhdar Bab Sâadoun Tunis",
                 Numero = "71 573 884"
             )
         )
         MapListTunis.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Charles Nicolle",
                 Location = "Hôpital Charles Nicolle 1006 Tunis",
                 Numero = "71 578 357"
             )
         )
         MapListTunis.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital La Rabta",
                 Location = "Hôpital La Rabta 1006 Tunis",
                 Numero = "71 578 819"
             )
         )
         MapListTunis.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Habib Thameur",
                 Location = "Hôpital Habib Thameur 1069 Tunis",
                 Numero = "71 397 000"
             )
         )
         MapListTunis.add(
-            Champion(
+            Inofrmations(
                 Nom = "Centre Militaire de Transfusion Sanguine",
                 Location = "Ras Tabia, 2000 Le Bardo",
                 Numero = "71 564 466"
@@ -172,14 +164,14 @@ class MapFragment : Fragment() {
         )
 ////////////////////Bizert
         MapListBizert.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Bizerte",
                 Location = "Hôpital Régional de Bizerte 7000 Bizerte",
                 Numero = "72 422 057"
             )
         )
         MapListBizert.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Menzel Bourguiba",
                 Location = "Hopital Régional de Menzel Bourguiba 7050 Menzel Bourguiba",
                 Numero = "72 460 455"
@@ -187,7 +179,7 @@ class MapFragment : Fragment() {
         )
 //////////////////Beja
         MapListBeja.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Béja",
                 Location = "Hôpital Régional de Béja 9000 Béja",
                 Numero = "78 457 322"
@@ -195,7 +187,7 @@ class MapFragment : Fragment() {
         )
 //////////////////Jendouba
         MapListJendouba.add(
-            Champion(
+            Inofrmations(
                 Nom = "Centre National de Transfusion Sanguine de Jendouba",
                 Location = "Hôpital Régional de Jendouba 8100 Jendouba",
                 Numero = "78 604 558"
@@ -203,21 +195,21 @@ class MapFragment : Fragment() {
         )
 //////////////////Nebel
         MapListNebel.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Nabeul",
                 Location = "Hôpital Régional de Nabeul 8000 Nabeul",
                 Numero = "72 285 633"
             )
         )
         MapListNebel.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Menzel Témime",
                 Location = "Hôpital Régional de Menzel Témime 8080 Menzel Témime",
                 Numero = "72 344 155"
             )
         )
         MapListNebel.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital de Circonscription de Grombalia",
                 Location = "Hôpital de Circonscription de Grombalia 8030 Grombalia",
                 Numero = "72 255 212"
@@ -225,7 +217,7 @@ class MapFragment : Fragment() {
         )
 //////////////////Zaghouan
         MapListZaghouan.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Zaghouan",
                 Location = "Hôpital Régional de Zaghouan 1100 Zaghouan",
                 Numero = "72 676 700"
@@ -233,7 +225,7 @@ class MapFragment : Fragment() {
         )
 //////////////////Kef
         MapListKef.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional du Kef",
                 Location = "Hôpital Régional du Kef 7100 Le Kef",
                 Numero = "78 228 900"
@@ -241,7 +233,7 @@ class MapFragment : Fragment() {
         )
 //////////////////Siliana
         MapListSiliana.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Siliana",
                 Location = "Hôpital Régional de Siliana 6100 Siliana",
                 Numero = "78 872 800"
@@ -249,35 +241,35 @@ class MapFragment : Fragment() {
         )
 //////////////////Sousse
         MapListSousse.add(
-            Champion(
+            Inofrmations(
                 Nom = "Centre Régional de Transfusion Sanguine de Sousse",
                 Location = "Hôpital Farhat Hached de Sousse 4000 Sousse",
                 Numero = "73 223 311"
             )
         )
         MapListSousse.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Sahloul de Sousse",
                 Location = "Hôpital Sahloul de Sousse 4000 Sousse",
                 Numero = "73 369 411"
             )
         )
         MapListSousse.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Fattouma Bourguiba de Monastir",
                 Location = "Hôpital Fattouma Bourguiba de Monastir 5000 Monastir",
                 Numero = "73 460 411"
             )
         )
         MapListSousse.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Ksar Hellal",
                 Location = "Hôpital Régional de Ksar Hellal 5070 Ksar Hellal",
                 Numero = "73 475 275"
             )
         )
         MapListSousse.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Mahdia",
                 Location = "Hôpital Régional de Mahdia 5100 Mahdia",
                 Numero = "3 671 744"
@@ -285,7 +277,7 @@ class MapFragment : Fragment() {
         )
 //////////////////Kairouan
         MapListKairouan.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Kairouan",
                 Location = "Hôpital Régional de Kairouan 3100 Kairouan",
                 Numero = "77 226 300"
@@ -293,7 +285,7 @@ class MapFragment : Fragment() {
         )
 //////////////////Kasserine
         MapListKasserine.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Kasserine",
                 Location = "Hôpital Régional de Kasserine 1200 Kasserine",
                 Numero = "77 474 910"
@@ -301,7 +293,7 @@ class MapFragment : Fragment() {
         )
 //////////////////SidiBouzid
         MapListSidiBouzid.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Sidi Bouzid",
                 Location = "Hôpital Régional de Sidi Bouzid 9100 Sidi Bouzid",
                 Numero = "76 632 500"
@@ -309,7 +301,7 @@ class MapFragment : Fragment() {
         )
 //////////////////Sfax
         MapListSfax.add(
-            Champion(
+            Inofrmations(
                 Nom = "Centre Régional de Transfusion Sanguine de Sfax",
                 Location = "Hôpital Habib Bourguiba de Sfax 3000 Sfax",
                 Numero = "74 241 511"
@@ -317,14 +309,14 @@ class MapFragment : Fragment() {
         )
 //////////////////Gafsa
         MapListGafsa.add(
-            Champion(
+            Inofrmations(
                 Nom = "Centre Régional de Transfusion Sanguine de Gafsa",
                 Location = "Hôpital Régional de Gafsa 2100 Gafsa",
                 Numero = "76 225 177"
             )
         )
         MapListGafsa.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Metlaoui",
                 Location = "Hôpital Régional de Metlaoui 2130 Metlaoui",
                 Numero = "76 241 600"
@@ -332,7 +324,7 @@ class MapFragment : Fragment() {
         )
         //////////////////Tozeur
         MapListTozeur.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Tozeur",
                 Location = "Hôpital Régional de Tozeur 2200 Tozeur",
                 Numero = "76 453 400"
@@ -340,7 +332,7 @@ class MapFragment : Fragment() {
         )
         //////////////////Gabès
         MapListGabes.add(
-            Champion(
+            Inofrmations(
                 Nom = "Centre Régional de Transfusion Sanguine de Gabès",
                 Location = "Hôpital Régional de Gabès 6001 Gabès",
                 Numero = "75 290 300"
@@ -348,7 +340,7 @@ class MapFragment : Fragment() {
         )
         //////////////////Kébili
         MapListKebili.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Kébili",
                 Location = "Hôpital Régional de Kébili 4200 Kébili",
                 Numero = "75 490 027"
@@ -356,7 +348,7 @@ class MapFragment : Fragment() {
         )
         //////////////////Tataouine
         MapListTataouine.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Tataouine",
                 Location = "Hôpital Régional de Tataouine 3200 Tataouine",
                 Numero = "75 870 114"
@@ -364,7 +356,7 @@ class MapFragment : Fragment() {
         )
         //////////////////Médenine
         MapListMedenine.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Médenine",
                 Location = "Hôpital Régional de Médenine 4100 Médenine",
                 Numero = "75 640 044"
@@ -372,7 +364,7 @@ class MapFragment : Fragment() {
         )
         //////////////////Djerba
         MapListDjerba.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Djerba",
                 Location = "Hôpital Régional de Djerba 4180 Houmet Souk - Djerba",
                 Numero = "75 650 018"
@@ -380,25 +372,14 @@ class MapFragment : Fragment() {
         )
         //////////////////Zarzis
         MapListZarzis.add(
-            Champion(
+            Inofrmations(
                 Nom = "Banque du Sang de l'Hôpital Régional de Zarzis",
                 Location = " Hôpital Régional de Zarzis 4170 Zarzis",
                 Numero = "75 738 026"
             )
         )
         //////////////////////////////////////////////////////////////////////////////
-        //check permission
-        //check internet
-        if (checkForInternet(requireContext())) { // There is cnx
-            if (ContextCompat.checkSelfPermission(
-                    requireContext(), android.Manifest.permission.ACCESS_FINE_LOCATION
-                ) != PackageManager.PERMISSION_GRANTED
-            ) {
-                requestPermissions(
-                    arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION),
-                    REQUEST_PERMISSION_REQUEST_CODE
-                )
-            } else {
+
         var locationRequest = LocationRequest()
         locationRequest.interval = 10000
         locationRequest.fastestInterval = 5000
@@ -520,15 +501,9 @@ class MapFragment : Fragment() {
                     }
                 }
             }, Looper.getMainLooper())
-            }
-        } else { // No cnx No Gps Sett Locations from DataBase //ToDo
-            //Toast.makeText(this, "Need internet to share location", Toast.LENGTH_SHORT).show()
-            recylcerChampionAdapter = ChampionAdapter(MapListZarzis) //ToDo List Of states
-            recylcerChampion.adapter = recylcerChampionAdapter
-            recylcerChampion.layoutManager =
-                LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        }
-    }
+}
+
+
 
     private fun checkForInternet(context: Context): Boolean {
 

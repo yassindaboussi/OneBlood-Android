@@ -8,26 +8,26 @@ import android.content.pm.PackageManager
 import android.graphics.Color
 import android.net.Uri
 import android.view.*
-import android.webkit.WebView
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import tn.esprit.leagueoflegendrecyclerview.data.Champion
+import tn.esprit.leagueoflegendrecyclerview.data.Inofrmations
 import tn.yassin.oneblood.R
+import tn.yassin.oneblood.Util.CustomDialog
 
-class ChampionAdapter(val championsList: MutableList<Champion>) :
-    RecyclerView.Adapter<ChampionViewHolder>() {
+class ChampionAdapter(val championsList: MutableList<Inofrmations>) :
+    RecyclerView.Adapter<InofrmationsViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChampionViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): InofrmationsViewHolder {
         val view =
             LayoutInflater.from(parent.context).inflate(R.layout.item_locations, parent, false)
-        return ChampionViewHolder(view)
+        return InofrmationsViewHolder(view)
 
     }
 
     override fun getItemCount() = championsList.size
 
-    override fun onBindViewHolder(holder: ChampionViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: InofrmationsViewHolder, position: Int) {
         val nom = championsList[position].Nom
         val location = championsList[position].Location
         val numero = championsList[position].Numero
@@ -36,11 +36,23 @@ class ChampionAdapter(val championsList: MutableList<Champion>) :
         holder.Location.text = location
         holder.Numero.text = numero
 
-        if (position % 2 == 0) {
+/*        val gradientDrawable = GradientDrawable(
+            GradientDrawable.Orientation.TOP_BOTTOM,
+            intArrayOf(Color.parseColor("#2b5876"),
+                Color.parseColor("#2b5876"))
+        );
+        gradientDrawable.cornerRadius = 0f;*/
+
+        //Cadre
+       if (position % 2 == 0) {
             holder.Background.setBackgroundColor(Color.parseColor("#181838"))
         } else {
-            holder.Background.setBackgroundColor(Color.parseColor("#381818"))  // replace normalColor with your default color.
+            holder.Background.setBackgroundColor(Color.parseColor("#363F4D"))  // replace normalColor with your default color.
         }
+        ///Background
+        //val mColors = arrayOf("#202B36","#FFFFFF")
+       // holder.itemView.setBackgroundColor(Color.parseColor(mColors[position % 2]));
+        holder.itemView.setBackgroundColor(Color.parseColor("#FFFFFF"));
 
         holder.itemView.setOnClickListener { //Show Popup
             PopUp(holder.itemView, nom, location, numero)
@@ -58,35 +70,46 @@ class ChampionAdapter(val championsList: MutableList<Champion>) :
 
 fun PopUpDialog(context: Context, Nom: String, Location: String, Numero: String) {
     val alertadd: AlertDialog.Builder = AlertDialog.Builder(context)
+    //alertadd.getWindow().setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT));
     val factory = LayoutInflater.from(context)
-    val view: View = factory.inflate(R.layout.popupdialog, null)
-    alertadd.setView(view)
-    alertadd.show()
+    val view: View = factory.inflate(R.layout.dialogmap, null)
+
+/*    alertadd.setView(view)
+    alertadd.show()*/
+
+    val msg = CustomDialog()
+    msg.ShowTheCustomPopUp(context,view)
+
 
     val CallDialog = view.findViewById<Button>(R.id.CallDialog) as? Button
     CallDialog?.setOnClickListener(object : View.OnClickListener {
         override fun onClick(view: View?) {
             println("Caaaaaaaaaaaaaaaaaaaaaaaaalllllllllllllllll")
+            val intent = Intent(Intent.ACTION_DIAL)
+            intent.data = Uri.parse("tel:$Numero")
+            context.startActivity(intent)
         }
     })
     val LocationDialog = view.findViewById<Button>(R.id.MapDialog) as? Button
     LocationDialog?.setOnClickListener(object : View.OnClickListener {
         override fun onClick(view: View?) {
+
+            //Check App is Not Disabled
             val ai: ApplicationInfo = context.getPackageManager().getApplicationInfo("com.google.android.apps.maps", 0)
             val appStatus = ai.enabled
 
             println("Maaaaaaaaaaaaaaaaaaaaapppppppppppppppppppppppppp")
             if (isAppInstalled("com.google.android.apps.maps", context) && appStatus) { // Check if Google Map existe and not disabled
                 val browserIntent = Intent(
-                    android.content.Intent.ACTION_VIEW,
+                    Intent.ACTION_VIEW,
                     Uri.parse("google.navigation:q=$Nom+$Location")
                 );
                 context.startActivity(browserIntent)
             }
             else
-            {
+            { //Open Map in Browser
                 val browserIntent = Intent(
-                    android.content.Intent.ACTION_VIEW,
+                    Intent.ACTION_VIEW,
                     Uri.parse("https://www.google.com/maps/place/$Nom+$Location/@36.8049507,10.1529202,16z/data=!4m9!1m2!2m1!1sbanque+du+sang!3m5!1s0x12fd339e90c9f481:0xd9b67502b8aeb544!8m2!3d36.8049507!4d10.1572976!15sCg5iYW5xdWUgZHUgc2FuZ5IBCmJsb29kX2Jhbms")
                 );
                 context.startActivity(browserIntent)

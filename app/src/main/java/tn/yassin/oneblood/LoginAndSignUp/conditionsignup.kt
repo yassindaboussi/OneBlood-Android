@@ -1,4 +1,4 @@
-package tn.yassin.oneblood
+package tn.yassin.oneblood.LoginAndSignUp
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.CheckBox
+import tn.yassin.oneblood.R
 
 class conditionsignup : AppCompatActivity() {
     private lateinit var btnConditionNext: Button

@@ -6,7 +6,7 @@ const val Nom = "NAME"
 const val Location = "Location"
 const val Numero = "Location"
 
-data class Champion(
+data class Inofrmations(
     val Nom: String,
     val Location: String,
     val Numero: String

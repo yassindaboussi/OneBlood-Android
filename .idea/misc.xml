@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/yassin/.gradle/caches/transforms-3/a41f65a1b182ec9e11a9bbe3d48996cb/transformed/appcompat-1.3.1/res/layout/support_simple_spinner_dropdown_item.xml" value="0.1956140350877193" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable-v24/ic_dashboard.xml" value="0.18888888888888888" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable-v24/ic_settings.xml" value="0.19210526315789472" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/barourapp.xml" value="0.23072916666666668" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/colorcadre.xml" value="0.2484375" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/homemenu.xml" value="0.1899122807017544" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/ic_home_foreground.xml" value="0.19444444444444445" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/ic_map_foreground.xml" value="0.19210526315789472" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/ic_search_foreground.xml" value="0.19210526315789472" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/roundedCadre.xml" value="0.19444444444444445" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/roundedbutton.xml" value="0.2074074074074074" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/shake.xml" value="0.2064935064935065" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/font/allerta.xml" value="0.20789473684210527" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/Loactions_single_item.xml" value="0.1956140350877193" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/activity_conditionsignup.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/barourapp.xml" value="0.2" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/conditionsignup.xml" value="0.264" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/cumstomdialog.xml" value="0.1587719298245614" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/customdialog.xml" value="0.2" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/forgetpassword.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/fragment_setting.xml" value="0.2" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/home.xml" value="0.15081521739130435" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/home_fragment.xml" value="0.4" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/homefragment.xml" value="0.264" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/item_locations.xml" value="0.264" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/loactions_single_item.xml" value="0.2" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/login.xml" value="0.2" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/map_fragment.xml" value="0.2" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/pop_up.xml" value="0.176" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/popup.xml" value="0.264" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/popupdialog.xml" value="0.264" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/search_fragment.xml" value="0.1956140350877193" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/setting_fragment.xml" value="0.4" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/signup.xml" value="0.2" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/signup_page1.xml" value="0.1824561403508772" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/signup_page2.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/simple.xml" value="0.1587719298245614" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/splashscreen.xml" value="0.17753623188405798" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/menu/bottom_nav_menu.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/menu/menu.xml" value="0.18020833333333333" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/menu/menulogin.xml" value="0.21458333333333332" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/mipmap-anydpi-v26/ic_map.xml" value="0.19210526315789472" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/mipmap-anydpi-v26/ic_map_round.xml" value="0.12631578947368421" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/mipmap-anydpi-v26/ic_search.xml" value="0.12631578947368421" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

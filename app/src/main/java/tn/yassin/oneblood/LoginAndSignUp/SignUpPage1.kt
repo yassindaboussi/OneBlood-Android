@@ -1,4 +1,4 @@
-package tn.yassin.oneblood
+package tn.yassin.oneblood.LoginAndSignUp
 
 import android.Manifest
 import android.content.Context
@@ -18,7 +18,6 @@ import android.net.NetworkCapabilities
 import android.os.Build
 import android.os.Looper
 import android.preference.PreferenceManager
-import android.view.View
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import java.util.*
@@ -28,7 +27,7 @@ import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
 import kotlinx.android.synthetic.main.*
-import java.util.*
+import tn.yassin.oneblood.R
 
 class SignUpPage1 : AppCompatActivity() {
     private lateinit var btnNextSignUp: Button
