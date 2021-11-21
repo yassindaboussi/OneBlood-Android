@@ -48,11 +48,12 @@
                 android:src="@drawable/hospital" />
 
             <TextView
-                android:id="@+id/Nominpopup"
+                android:id="@+id/NomHospital"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Habib Thameur"
+                android:textColor="#FF5F7B"
                 android:textSize="22dp"
                 android:textStyle="bold" />
 

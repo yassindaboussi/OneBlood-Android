@@ -5,13 +5,17 @@ import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.view.View
+import tn.yassin.oneblood.R
 
 class CustomDialog {
     fun ShowTheCustomPopUp(context: Context?,view: View) {
         val dialog = Dialog(context!!)
         dialog.setContentView(view)
         dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.window!!.getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.show()
+
+
     }
 }
 

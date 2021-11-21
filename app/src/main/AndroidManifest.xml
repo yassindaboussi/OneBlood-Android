@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.ACCESS_GPS" />
     <uses-permission android:name="android.permission.ACCESS_ASSISTED_GPS" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
         android:allowBackup="true"
@@ -21,19 +22,19 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyA-qXfW8oOYqAqU4xi--hQs2C-N_yS1ros" />
+            android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".conditionsignup"
+            android:name=".LoginAndSignUp.conditionsignup"
             android:exported="false" />
         <activity
-            android:name=".ForgetPassword"
+            android:name=".LoginAndSignUp.ForgetPassword"
             android:exported="false" />
         <activity
-            android:name=".SignUpPage1"
+            android:name=".LoginAndSignUp.SignUpPage1"
             android:exported="false" />
         <activity
-            android:name=".SignUpPage2"
+            android:name=".LoginAndSignUp.SignUpPage2"
             android:exported="false" />
         <activity
             android:name=".Home"
@@ -50,7 +51,7 @@
         </activity>
 
         <activity
-            android:name=".Login"
+            android:name=".LoginAndSignUp.Login"
             android:exported="true"
             />
 
