@@ -8,7 +8,7 @@ OneBlood 🩸 is an Application for Mobile 📱 devices, designed to bring blood
 ## Screenshots
 Login&Signup           | Home
 :---------------------:|:------------------:
-![Login&Signup](screenshots/Login.gif)  | ![Home](screenshots/Home.gif)
+![Login&Signup](screenshots/login.gif)  | ![Home](screenshots/Home.gif)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
