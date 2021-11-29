@@ -92,7 +92,7 @@ class SignUpPage2 : AppCompatActivity() {
         val requestBody = jsonObjectString.toRequestBody("application/json".toMediaTypeOrNull())
         CoroutineScope(Dispatchers.IO).launch {
             // Do the POST request and get response
-            val response = service.Signupranyfadyyt(requestBody)
+            val response = service.Signup(requestBody)
             withContext(Dispatchers.Main) {
                 if (response.isSuccessful) {
                     // Convert raw JSON to pretty JSON using GSON library

@@ -106,7 +106,7 @@ class Login : AppCompatActivity() {
         val requestBody = jsonObjectString.toRequestBody("application/json".toMediaTypeOrNull())
         CoroutineScope(Dispatchers.IO).launch {
             // Do the POST request and get response
-            val response = service.Loginranyfadyyt(requestBody)
+            val response = service.Login(requestBody)
             withContext(Dispatchers.Main) {
                 if (response.isSuccessful) {
                     // Convert raw JSON to pretty JSON using GSON library

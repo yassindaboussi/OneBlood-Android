@@ -8,16 +8,13 @@ import android.graphics.Color
 import android.net.Uri
 import android.view.*
 import android.view.animation.AnimationUtils
-import android.view.animation.LayoutAnimationController
 import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import tn.esprit.leagueoflegendrecyclerview.data.Inofrmations
 import tn.yassin.oneblood.R
 import tn.yassin.oneblood.Util.CustomDialog
-import android.view.animation.Animation
 import tn.yassin.oneblood.Util.PlayMusic
-import java.security.AccessController.getContext
 
 
 class ChampionAdapter(val championsList: MutableList<Inofrmations>) :
@@ -77,7 +74,6 @@ fun PopUpDialog(context: Context, Nom: String, Location: String, Numero: String)
     //Show PopUpp
     val factory = LayoutInflater.from(context)
     val view: View = factory.inflate(R.layout.dialogmap, null)
-
     val msg = CustomDialog()
     msg.ShowTheCustomPopUp(context,view)
     // End Show PopUpp
@@ -111,7 +107,7 @@ fun PopUpDialog(context: Context, Nom: String, Location: String, Numero: String)
             }
         }
     })
-    val btnCallHospitall = view.findViewById<Button>(R.id.CallDialog) as? Button
+    val btnCallHospitall = view.findViewById<Button>(R.id.OkaybtnDialog) as? Button
     btnCallHospitall?.setOnClickListener(object : View.OnClickListener {
         override fun onClick(view: View?) {
             println("Caaaaaaaaaaaaaaaaaaaaaaaaalllllllllllllllll")
@@ -123,8 +119,8 @@ fun PopUpDialog(context: Context, Nom: String, Location: String, Numero: String)
     //END Action On PopUp
 
     // Set Values
-    val NomHospital = view.findViewById<TextView>(R.id.NomHospital) as? TextView
-    val LocationHospital = view.findViewById<TextView>(R.id.Locationinpopup) as? TextView
+    val NomHospital = view.findViewById<TextView>(R.id.Subject) as? TextView
+    val LocationHospital = view.findViewById<TextView>(R.id.Message) as? TextView
     val NumeroHospital = view.findViewById<TextView>(R.id.Numeroinpopup) as? TextView
 
     NomHospital?.text = Nom

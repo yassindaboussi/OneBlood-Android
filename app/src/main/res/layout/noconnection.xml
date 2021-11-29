@@ -25,7 +25,7 @@
                 android:id="@+id/textView11"
                 android:layout_width="match_parent"
                 android:layout_height="58dp"
-                android:background="#398DFF"
+                android:background="#F34336"
                 android:gravity="center"
                 android:text="INFORMATIONS"
                 android:textColor="#FFFFFF"
@@ -37,22 +37,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="وَمَنْ أَحْيَاهَا فَكَأَنَّمَا أَحْيَا النَّاسَ جَمِيعاً"
                 android:textColor="#93989C"
                 android:textSize="16sp" />
 
             <ImageView
                 android:id="@+id/dialog_imageview"
                 android:layout_width="match_parent"
-                android:layout_height="93dp"
-                android:src="@drawable/hospital" />
+                android:layout_height="120dp"
+                android:src="@drawable/nowifi" />
 
             <TextView
                 android:id="@+id/Subject"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="44dp"
                 android:gravity="center"
-                android:text="Habib Thameur"
+                android:text="No Internet :("
                 android:textColor="#FF5F7B"
                 android:textSize="22dp"
                 android:textStyle="bold" />
@@ -60,19 +59,10 @@
             <TextView
                 android:id="@+id/Message"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="36dp"
                 android:gravity="center"
-                android:text="CHU Habib Thameur 1069 Tunis"
+                android:text="You need to be connected to the internet"
                 android:textColor="#93989C"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/Numeroinpopup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="71.135.000"
-                android:textColor="#CAA3A3"
                 android:textSize="16sp" />
 
             <LinearLayout
@@ -85,18 +75,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:background="#23D77E"
-                    android:text="Call"
+                    android:background="#36474F"
+                    android:text="i got it"
                     android:textColor="#FFFFFF" />
 
-                <Button
-                    android:id="@+id/MapDialog"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#DAE9FE"
-                    android:text="Map"
-                    android:textColor="#A6B8D0" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
