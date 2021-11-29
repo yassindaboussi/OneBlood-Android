@@ -175,7 +175,6 @@ class SignUpPage1 : AppCompatActivity() {
                         .removeLocationUpdates(this)
                     if (locationResult != null && locationResult.locations.size > 0) {
                         var locIndex = locationResult.locations.size - 1
-
                         var latitude = locationResult.locations.get(locIndex).latitude
                         var longitude = locationResult.locations.get(locIndex).longitude
 

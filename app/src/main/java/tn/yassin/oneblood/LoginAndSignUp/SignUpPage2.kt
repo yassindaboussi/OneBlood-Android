@@ -1,12 +1,27 @@
 package tn.yassin.oneblood.LoginAndSignUp
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.gson.GsonBuilder
+import com.google.gson.JsonParser
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.RequestBody.Companion.toRequestBody
+import org.json.JSONObject
+import retrofit2.Retrofit
+import tn.yassin.oneblood.Home
 import tn.yassin.oneblood.R
+import tn.yassin.oneblood.Retrofit.Request
+import tn.yassin.oneblood.Retrofit.retrofit
 
 class SignUpPage2 : AppCompatActivity() {
     private lateinit var btnFinishSignUp: Button
@@ -42,17 +57,13 @@ class SignUpPage2 : AppCompatActivity() {
 
         btnFinishSignUp = findViewById(R.id.btnFinishSignUp)
         btnFinishSignUp.setOnClickListener {
-            val intent = Intent(this, Login::class.java).apply {
+/*            val intent = Intent(this, Login::class.java).apply {
             }
-         startActivity(intent)
+         startActivity(intent)*/
+            ServiceSignuP()
         }
 
-//        if(CheckboxPerson.isChecked)
-//        {
-//            inputAge.setText("1");
-//        }
-//        else {
-//            inputAge.setText("2")}
+
     }
 
     fun GetBloodType(BloodA: Button) {
@@ -60,4 +71,49 @@ class SignUpPage2 : AppCompatActivity() {
 
         }
     }
+
+
+    fun ServiceSignuP() {
+        // Create Retrofit
+        val retrofi: Retrofit = retrofit.getInstance()
+        val service: Request = retrofi.create(Request::class.java)
+        // Create JSON using JSONObject
+        val jsonObject = JSONObject()
+        jsonObject.put("name", "abcd")
+        jsonObject.put("email", "a@a.com")
+        jsonObject.put("password", "12345")
+        jsonObject.put("blood", "O+")
+        jsonObject.put("age", "25")
+        jsonObject.put("weight", "74")
+        jsonObject.put("adress", "Tunis")
+        // Convert JSONObject to String
+        val jsonObjectString = jsonObject.toString()
+        // Create RequestBody ( We're not using any converter, like GsonConverter, MoshiConverter e.t.c, that's why we use RequestBody )
+        val requestBody = jsonObjectString.toRequestBody("application/json".toMediaTypeOrNull())
+        CoroutineScope(Dispatchers.IO).launch {
+            // Do the POST request and get response
+            val response = service.Signupranyfadyyt(requestBody)
+            withContext(Dispatchers.Main) {
+                if (response.isSuccessful) {
+                    // Convert raw JSON to pretty JSON using GSON library
+                    val gson = GsonBuilder().setPrettyPrinting().create()
+                    val prettyJson = gson.toJson(JsonParser.parseString(response.body()?.string()))
+                    Log.d("Pretty Printed JSON :", prettyJson)
+
+                   // GoToHome(this@SignUpPage2) //GoTo Page Home
+
+                } else {
+                    Log.e("RETROFIT_ERROR", response.code().toString())
+                }
+            }
+        }
+    }
+
+    fun GoToHome(context: Context) {
+        val intent = Intent(context, Home::class.java)
+        context.startActivity(intent)
+        finish()
+    }
+
+
 }

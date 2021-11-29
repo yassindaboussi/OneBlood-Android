@@ -20,6 +20,7 @@ import android.os.Build
 import android.os.Looper
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationResult
@@ -35,14 +36,14 @@ private var self: View? = null
 class MapFragment : Fragment() {
     lateinit var recylcerChampion: RecyclerView
     lateinit var recylcerChampionAdapter: ChampionAdapter
-
+    var mSwipeRefreshLayout: SwipeRefreshLayout? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.map_fragment, container, false)
-
     }
 
     companion object {
@@ -60,10 +61,18 @@ class MapFragment : Fragment() {
         var name = preferences.getString("Name", "")
         println("My Position now ==>>> "+name)*/
 
-
         //getCurrentLocation()
+        if (checkForInternet(requireContext())) { // is Cnx == true
+        SetLocationUser()}
 
-        SetLocationUser()
+/*        // on refresh layout
+        mSwipeRefreshLayout= view.findViewById<SwipeRefreshLayout>(R.id.recyclerLocations)
+        mSwipeRefreshLayout!!.setOnRefreshListener {
+            //API Calls
+            if (checkForInternet(requireContext())) { // is Cnx == true
+                SetLocationUser()}
+        }*/
+        
     }
 
 
@@ -682,11 +691,10 @@ class MapFragment : Fragment() {
                         //val cityName = addresses[0].getLocality()
                         var stateName = addresses[0].adminArea
 
-                       if(addresses[0].adminArea == null) {
+                        if (addresses[0].adminArea == null) {
                             println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
                             recylcerChampionAdapter = ChampionAdapter(MapListAll)
-                        }
-                        else {
+                        } else {
                             locationMap.text = stateName
                             println("cityName =>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> " + stateName)
                             ////...........1.........////
@@ -699,73 +707,73 @@ class MapFragment : Fragment() {
                             if (stateName.toLowerCase().contains("bizert")) {
                                 recylcerChampionAdapter = ChampionAdapter(MapListBizert)
                             }
-                           if (stateName.toLowerCase().contains("béja")) {
+                            if (stateName.toLowerCase().contains("béja")) {
                                 recylcerChampionAdapter = ChampionAdapter(MapListBeja)
                             }
-                                                      if (stateName.toLowerCase().contains("jendouba")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListJendouba)
-                                                     }
-                                                     if (stateName.toLowerCase().contains("nebel")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListNebel)
-                                                     }
-                                                     if (stateName.toLowerCase().contains("zaghouan")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListZaghouan)
-                                                     }
-                                                     if (stateName.toLowerCase().contains("kef")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListKef)
-                                                     }
-                                                     ////...........2.........////
-                                                     if (stateName.toLowerCase().contains("siliana")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListSiliana)
-                                                     }
-                                                     if (stateName.toLowerCase()
-                                                             .contains("sousse") || stateName.toLowerCase()
-                                                             .contains("monastir") || stateName.toLowerCase()
-                                                             .contains("mahdia")
-                                                     ) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListSousse)
-                                                     }
-                                                     if (stateName.toLowerCase().contains("kairouan")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListKairouan)
-                                                     }
-                                                     if (stateName.toLowerCase().contains("kasserine")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListKasserine)
-                                                     }
-                                                     if (stateName.toLowerCase().contains("Sidi Bouzid")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListSidiBouzid)
-                                                     }
-                                                     if (stateName.toLowerCase().contains("sfax")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListSfax)
-                                                     }
-                                                     ////...........3.........////
-                                                     if (stateName.toLowerCase().contains("gafsa")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListGafsa)
-                                                     }
-                                                     if (stateName.toLowerCase().contains("tozeur")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListTozeur)
-                                                     }
-                                                     if (stateName.toLowerCase().contains("gabès")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListGabes)
-                                                     }
-                                                     if (stateName.toLowerCase().contains("kebili")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListKebili)
-                                                     }
-                                                     if (stateName.toLowerCase().contains("tataouine")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListTataouine)
-                                                     }
-                                                     if (stateName.toLowerCase().contains("medenine")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListMedenine)
-                                                     }
-                                                     if (stateName.toLowerCase().contains("djerba")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListDjerba)
-                                                     }
-                                                     if (stateName.toLowerCase().contains("zarzis")) {
-                                                         recylcerChampionAdapter = ChampionAdapter(MapListZarzis)
-                                                     }
+                            if (stateName.toLowerCase().contains("jendouba")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListJendouba)
+                            }
+                            if (stateName.toLowerCase().contains("nebel")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListNebel)
+                            }
+                            if (stateName.toLowerCase().contains("zaghouan")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListZaghouan)
+                            }
+                            if (stateName.toLowerCase().contains("kef")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListKef)
+                            }
+                            ////...........2.........////
+                            if (stateName.toLowerCase().contains("siliana")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListSiliana)
+                            }
+                            if (stateName.toLowerCase()
+                                    .contains("sousse") || stateName.toLowerCase()
+                                    .contains("monastir") || stateName.toLowerCase()
+                                    .contains("mahdia")
+                            ) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListSousse)
+                            }
+                            if (stateName.toLowerCase().contains("kairouan")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListKairouan)
+                            }
+                            if (stateName.toLowerCase().contains("kasserine")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListKasserine)
+                            }
+                            if (stateName.toLowerCase().contains("Sidi Bouzid")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListSidiBouzid)
+                            }
+                            if (stateName.toLowerCase().contains("sfax")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListSfax)
+                            }
+                            ////...........3.........////
+                            if (stateName.toLowerCase().contains("gafsa")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListGafsa)
+                            }
+                            if (stateName.toLowerCase().contains("tozeur")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListTozeur)
+                            }
+                            if (stateName.toLowerCase().contains("gabès")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListGabes)
+                            }
+                            if (stateName.toLowerCase().contains("kebili")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListKebili)
+                            }
+                            if (stateName.toLowerCase().contains("tataouine")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListTataouine)
+                            }
+                            if (stateName.toLowerCase().contains("medenine")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListMedenine)
+                            }
+                            if (stateName.toLowerCase().contains("djerba")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListDjerba)
+                            }
+                            if (stateName.toLowerCase().contains("zarzis")) {
+                                recylcerChampionAdapter = ChampionAdapter(MapListZarzis)
+                            }
 /*                            else { // Hedh tjy erreur yefichi kolchay heta ken heya f tunis mthlen
                                 recylcerChampionAdapter = ChampionAdapter(MapListAll)
                                 }*/
-                       }
+                        }
 
 
                         recylcerChampion.adapter = recylcerChampionAdapter
@@ -774,8 +782,7 @@ class MapFragment : Fragment() {
                     }
                 }
             }, Looper.getMainLooper())
-}
-
+    }
 
 
     private fun checkForInternet(context: Context): Boolean {
@@ -817,7 +824,6 @@ class MapFragment : Fragment() {
             return networkInfo.isConnected
         }
     }
-
 
 
 }
