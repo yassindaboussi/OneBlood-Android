@@ -4,6 +4,7 @@ import android.content.Intent
 import android.content.pm.ApplicationInfo
 import android.net.Uri
 import android.os.Bundle
+import android.preference.PreferenceManager
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
@@ -31,7 +32,7 @@ class Home : AppCompatActivity() {
 
         navigtion_container.setOnNavigationItemSelectedListener {
             if ((msg.checkForInternet(this))) {
-                println("Onnnnnnnnnnnnnnnnnnnnnnnnnn")
+                println("Internet is ON!")
                 when (it.itemId) {
                     R.id.id_Home -> navigationFragments(HomeFragment())
                     R.id.id_search -> navigationFragments(SearchFragment())
@@ -39,7 +40,7 @@ class Home : AppCompatActivity() {
                     R.id.id_setting -> navigationFragments(SettingFragment())
                 }
             } else {
-                println("Offffffffffffffffffffffff")
+                println("Internet is OFF!")
                 val factory = LayoutInflater.from(this)
                 val view: View = factory.inflate(R.layout.noconnection, null)
                 val msg = CustomDialog()

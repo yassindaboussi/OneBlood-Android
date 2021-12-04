@@ -11,5 +11,6 @@ class InofrmationsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
     val Nom : TextView = itemView.findViewById<TextView>(R.id.Nom)
     val Location : TextView = itemView.findViewById<TextView>(R.id.Location)
     val Numero : TextView = itemView.findViewById<TextView>(R.id.Numero)
+    val DistanceKM : TextView = itemView.findViewById<TextView>(R.id.DistanceKM)
     val Background : LinearLayout = itemView.findViewById<LinearLayout>(R.id.Carditem)
 }

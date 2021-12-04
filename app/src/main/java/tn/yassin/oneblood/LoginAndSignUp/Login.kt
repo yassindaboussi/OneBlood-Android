@@ -22,6 +22,7 @@ import tn.yassin.oneblood.R
 import retrofit2.Retrofit
 import tn.yassin.oneblood.Home
 import tn.yassin.oneblood.Retrofit.Request
+import tn.yassin.oneblood.Retrofit.User
 import tn.yassin.oneblood.Retrofit.retrofit
 
 
@@ -41,15 +42,15 @@ class Login : AppCompatActivity() {
 
         btnLogin.setOnClickListener {
             Checkinputs(EmailLogin, PasswordLogin)
-            if ((EmailLogin.text.toString().isEmailValid()) && !(PasswordLogin.text.isEmpty()))
-            {
-/*
-                val intent = Intent(this, Home::class.java).apply {}
-                startActivity(intent)
-*/
+          //  if ((EmailLogin.text.toString().isEmailValid()) && !(PasswordLogin.text.isEmpty()))
+            //{
+
+              //  val intent = Intent(this, Home::class.java).apply {}
+             //   startActivity(intent)
+
                 ServiceLogin(EmailLogin.text.toString(),PasswordLogin.text.toString())
 
-            }
+          //  }
         }
 
         btnSignUp.setOnClickListener {
@@ -96,6 +97,9 @@ class Login : AppCompatActivity() {
         // Create Retrofit
         val retrofi: Retrofit = retrofit.getInstance()
         val service: Request = retrofi.create(Request::class.java)
+        val User = User()
+        User.setEmail("yassin@esprit.tn")
+        User.setPassword("1234567")
         // Create JSON using JSONObject
         val jsonObject = JSONObject()
         jsonObject.put("email", email)
@@ -106,14 +110,13 @@ class Login : AppCompatActivity() {
         val requestBody = jsonObjectString.toRequestBody("application/json".toMediaTypeOrNull())
         CoroutineScope(Dispatchers.IO).launch {
             // Do the POST request and get response
-            val response = service.Login(requestBody)
+            val response = service.Login2(User)
             withContext(Dispatchers.Main) {
                 if (response.isSuccessful) {
                     // Convert raw JSON to pretty JSON using GSON library
                     val gson = GsonBuilder().setPrettyPrinting().create()
-                    val prettyJson = gson.toJson(JsonParser.parseString(response.body()?.string()))
-                    Log.d("Pretty Printed JSON :", prettyJson)
 
+                    println("Token =============>>>>>>>>>  "+response.body()?.string())
                     GoToHome(this@Login) //GoTo Page Home
 
                 } else {

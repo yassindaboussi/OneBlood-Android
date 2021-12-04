@@ -48,7 +48,7 @@
                 android:src="@drawable/hospital" />
 
             <TextView
-                android:id="@+id/Subject"
+                android:id="@+id/NomHospital"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -58,7 +58,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/Message"
+                android:id="@+id/LocationHospital"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -67,7 +67,7 @@
                 android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/Numeroinpopup"
+                android:id="@+id/NumeroHospital"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"

@@ -47,7 +47,7 @@
                 android:src="@drawable/nowifi" />
 
             <TextView
-                android:id="@+id/Subject"
+                android:id="@+id/NomHospital"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
                 android:gravity="center"
@@ -57,7 +57,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/Message"
+                android:id="@+id/LocationHospital"
                 android:layout_width="match_parent"
                 android:layout_height="36dp"
                 android:gravity="center"

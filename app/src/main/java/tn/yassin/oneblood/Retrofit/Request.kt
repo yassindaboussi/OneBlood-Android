@@ -11,6 +11,9 @@ interface Request {
     @POST("signin")
     suspend fun Login(@Body requestBody: RequestBody): Response<ResponseBody>
 
+    @POST("signin")
+    suspend fun Login2(@Body User: User): Response<ResponseBody>
+
     @POST("signup")
     suspend fun Signup(@Body requestBody: RequestBody): Response<ResponseBody>
 }
