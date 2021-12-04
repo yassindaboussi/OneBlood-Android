@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Firas/Documents/GitHub/OneBlood/app/src/main/res/layout/home.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Firas/Documents/GitHub/OneBlood/app/src/main/res/layout/home_fragment.xml" value="0.3255208333333333" />
+        <entry key="..\:/Users/Firas/Documents/GitHub/OneBlood/app/src/main/res/layout/noconnection.xml" value="0.13020833333333334" />
         <entry key="..\:/Users/yassin/.gradle/caches/transforms-3/a41f65a1b182ec9e11a9bbe3d48996cb/transformed/appcompat-1.3.1/res/layout/support_simple_spinner_dropdown_item.xml" value="0.1956140350877193" />
         <entry key="..\:/Users/yassin/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_dropdown_item.xml" value="0.1587719298245614" />
         <entry key="..\:/Users/yassin/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.1587719298245614" />
@@ -37,15 +40,13 @@
         <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/home.xml" value="0.15081521739130435" />
         <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/home_fragment.xml" value="0.4" />
         <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/homefragment.xml" value="0.264" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/item_donor.xml" value="0.11403508771929824" />
         <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/item_donors.xml" value="0.2" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/item_locations.xml" value="0.4" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/item_locations.xml" value="0.264" />
         <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/item_needly.xml" value="0.2" />
         <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/loactions_single_item.xml" value="0.2" />
         <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/login.xml" value="0.264" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/map_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/map_fragment.xml" value="0.2" />
         <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/needly_fragment.xml" value="0.19210526315789472" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/noconnection.xml" value="0.264" />
         <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/pfffff.xml" value="0.264" />
         <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/pop_up.xml" value="0.176" />
         <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/popup.xml" value="0.264" />

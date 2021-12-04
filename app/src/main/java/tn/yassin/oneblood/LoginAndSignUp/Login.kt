@@ -27,6 +27,7 @@ import tn.yassin.oneblood.Retrofit.retrofit
 
 
 class Login : AppCompatActivity() {
+    private lateinit var sessionManager: SessionManager
     private lateinit var btnLogin: Button
     private lateinit var txtForgetPassword: TextView
     private lateinit var btnSignUp: TextView
@@ -92,8 +93,9 @@ class Login : AppCompatActivity() {
     fun String.isEmailValid(): Boolean {
         return !TextUtils.isEmpty(this) && android.util.Patterns.EMAIL_ADDRESS.matcher(this).matches()
     }
-
+    var token: String? = null
     fun ServiceLogin(email:String,password:String) {
+        sessionManager = SessionManager(this)
         // Create Retrofit
         val retrofi: Retrofit = retrofit.getInstance()
         val service: Request = retrofi.create(Request::class.java)
@@ -101,22 +103,18 @@ class Login : AppCompatActivity() {
         User.setEmail("yassin@esprit.tn")
         User.setPassword("1234567")
         // Create JSON using JSONObject
-        val jsonObject = JSONObject()
-        jsonObject.put("email", email)
-        jsonObject.put("password", password)
-        // Convert JSONObject to String
-        val jsonObjectString = jsonObject.toString()
-        // Create RequestBody ( We're not using any converter, like GsonConverter, MoshiConverter e.t.c, that's why we use RequestBody )
-        val requestBody = jsonObjectString.toRequestBody("application/json".toMediaTypeOrNull())
+
         CoroutineScope(Dispatchers.IO).launch {
             // Do the POST request and get response
             val response = service.Login2(User)
             withContext(Dispatchers.Main) {
                 if (response.isSuccessful) {
                     // Convert raw JSON to pretty JSON using GSON library
-                    val gson = GsonBuilder().setPrettyPrinting().create()
 
-                    println("Token =============>>>>>>>>>  "+response.body()?.string())
+
+                    println("Token =============>>>>>>>>>  "+response.body()?.getToken())
+
+                    sessionManager.saveAuthToken(response.body()?.getToken().toString())
                     GoToHome(this@Login) //GoTo Page Home
 
                 } else {
