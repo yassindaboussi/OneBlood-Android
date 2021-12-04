@@ -10,6 +10,5 @@ Login&Signup           | Home
 :---------------------:|:------------------:
 ![Login&Signup](screenshots/login.gif)  | ![Home](screenshots/Home.gif)
 
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
