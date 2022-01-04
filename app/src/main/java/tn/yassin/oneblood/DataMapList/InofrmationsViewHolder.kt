@@ -1,7 +1,6 @@
-package tn.esprit.leagueoflegendrecyclerview.championList
+package tn.yassin.oneblood.DataMapList
 
 import android.view.View
-import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView

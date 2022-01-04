@@ -16,18 +16,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/gradiant_splash" />
 
-    <ImageView
-        android:id="@+id/Logo"
-        android:layout_width="187dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="271dp"
-        android:layout_marginEnd="89dp"
-        android:layout_marginBottom="79dp"
-        app:layout_constraintBottom_toTopOf="@+id/Titre"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon" />
-
     <TextView
         android:id="@+id/Titre"
         android:layout_width="wrap_content"
@@ -39,6 +27,5 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Logo" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

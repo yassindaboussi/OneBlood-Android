@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="391dp"
+        android:layout_height="500dp"
+        app:cardCornerRadius="35dp"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="14dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout9"
+                    android:layout_width="224dp"
+                    android:layout_height="273dp"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout7"
+                    app:layout_constraintTop_toBottomOf="@+id/textView23">
+
+                    <TextView
+                        android:id="@+id/deleteBlood"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_margin="11dp"
+                        android:background="@drawable/roundedcadre"
+                        android:gravity="center"
+                        android:text="Contact"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/deleteName"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_margin="11dp"
+                        android:background="@drawable/roundedcadre"
+                        android:gravity="center"
+                        android:text="Contact"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/deleteHospital"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_margin="11dp"
+                        android:background="@drawable/roundedcadre"
+                        android:gravity="center"
+                        android:text="Contact"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/deletePhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_margin="11dp"
+                        android:background="@drawable/roundedcadre"
+                        android:gravity="center"
+                        android:text="Contact"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout7"
+                    android:layout_width="98dp"
+                    android:layout_height="273dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView23">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="9dp"
+                        android:background="@drawable/roundedcadre"
+                        app:srcCompat="@drawable/bloodtype" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="9dp"
+                        android:background="@drawable/roundedcadre"
+                        app:srcCompat="@drawable/userdetails" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="9dp"
+                        android:background="@drawable/roundedcadre"
+                        app:srcCompat="@drawable/placeholder" />
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="9dp"
+                        android:background="@drawable/roundedcadre"
+                        app:srcCompat="@drawable/smartphone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="389dp"
+                    android:layout_height="41dp"
+                    android:layout_marginTop="13dp"
+                    android:background="#181838"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
+                    tools:layout_editor_absoluteX="-3dp">
+
+                    <Button
+                        android:id="@+id/btnYesDeleteNeedy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#15C39A"
+                        android:text="Yes"
+                        android:textColor="#FFFEFE" />
+
+                    <Button
+                        android:id="@+id/btnNoDeleteNeedy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/Redfate7"
+                        android:text="No"
+                        android:textColor="#FFFEFE" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="391dp"
+                    android:layout_height="92dp"
+                    app:srcCompat="@drawable/deletebg"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="1dp" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="You are about to delete this post"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView7"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="this post will be deleted immediately. you can't undo this action"
+                    android:textStyle="normal"
+                    app:layout_constraintTop_toBottomOf="@+id/textView22"
+                    tools:layout_editor_absoluteX="0dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</ScrollView>

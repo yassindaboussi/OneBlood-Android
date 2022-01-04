@@ -1,69 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragments.SettingFragment">
 
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="696dp">
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="185dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="322dp"
-            android:elevation="9dp"
-            android:src="@drawable/yassin"
-            app:layout_constraintBottom_toTopOf="@+id/UpdateUserSetting"
+        <TextView
+            android:id="@+id/txtChangePassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Change password?"
+            android:textColor="#62A4F5"
+            android:textSize="15sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/include3" />
+            app:layout_constraintTop_toBottomOf="@+id/UpdateUserSetting" />
 
         <ImageView
             android:id="@+id/cadreimgSetting"
-            android:layout_width="204dp"
-            android:layout_height="161dp"
-            android:layout_marginTop="55dp"
+            android:layout_width="200dp"
+            android:layout_height="175dp"
+            android:layout_marginBottom="23dp"
             android:background="@drawable/roundedcadre"
             android:elevation="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/include3" />
+
+        <ImageView
+            android:id="@+id/UserimagSetting"
+            android:layout_width="185dp"
+            android:layout_height="136dp"
+            android:elevation="9dp"
+            android:src="@drawable/yassin"
+            app:layout_constraintBottom_toBottomOf="@+id/cadreimgSetting"
+            app:layout_constraintEnd_toEndOf="@+id/cadreimgSetting"
+            app:layout_constraintStart_toStartOf="@+id/cadreimgSetting"
+            app:layout_constraintTop_toTopOf="@+id/cadreimgSetting" />
 
         <include
             android:id="@+id/include3"
             layout="@layout/barourapp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="65dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageView"
+            android:layout_marginBottom="19dp"
+            app:layout_constraintBottom_toTopOf="@+id/cadreimgSetting"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/UpdateUserSetting"
-            android:layout_width="216dp"
-            android:layout_height="44dp"
-            android:layout_marginBottom="65dp"
+            android:layout_width="206dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="44dp"
             android:background="@drawable/roundedbutton"
             android:elevation="8dp"
             android:text="Save"
             android:textColor="#ffff"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="281dp"
-            android:layout_height="244dp"
-            android:layout_marginStart="70dp"
-            android:layout_marginEnd="46dp"
+            android:layout_width="348dp"
+            android:layout_height="290dp"
+            android:layout_marginStart="53dp"
+            android:layout_marginEnd="53dp"
+            android:layout_marginBottom="17dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/UpdateUserSetting"
             app:layout_constraintEnd_toEndOf="parent"
@@ -75,11 +94,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Name"
+                    android:textColor="#838080" />
+
                 <EditText
                     android:id="@+id/EditNameSetting"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:backgroundTint="@color/disabled_color"
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:text="Daboussi Yassin"
@@ -98,13 +126,22 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Email"
+                    android:textColor="#838080" />
+
                 <EditText
                     android:id="@+id/EditEmailSetting"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:backgroundTint="@color/disabled_color"
                     android:ems="10"
-                    android:inputType="textPersonName"
+                    android:inputType="textEmailAddress"
                     android:text="yassin.daboussi@esprit.tn"
                     android:textSize="16sp" />
 
@@ -121,18 +158,28 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Phone"
+                    android:textColor="#838080" />
+
                 <EditText
-                    android:id="@+id/EditPasswordSetting"
+                    android:id="@+id/EditPhoneSetting"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:backgroundTint="@color/disabled_color"
                     android:ems="10"
-                    android:inputType="text|textPassword"
-                    android:text="password"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:text="24058589"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/EditPassword"
+                    android:id="@+id/EditPhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -144,15 +191,84 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Age"
+                    android:textColor="#838080" />
+
                 <EditText
-                    android:id="@+id/EditTypeBloodSetting"
+                    android:id="@+id/EditAgeSetting"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:backgroundTint="@color/disabled_color"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:text="20"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/EditAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Edit" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Location"
+                    android:textColor="#838080" />
+
+                <EditText
+                    android:id="@+id/EditPasswordSetting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/disabled_color"
                     android:ems="10"
                     android:inputType="textPersonName"
-                    android:text="TypeBlood: AB+"
+                    android:text="Ariana"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/EditLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/Edit" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="42dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Blood"
+                    android:textColor="#838080" />
+
+                <Spinner
+                    android:id="@+id/EditTypeBloodSetting"
+                    android:layout_width="236dp"
+                    android:layout_height="wrap_content" />
 
                 <TextView
                     android:id="@+id/EditTypeBlood"
@@ -167,33 +283,18 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <EditText
-                    android:id="@+id/EditLocationSetting"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="Location : Ariana"
-                    android:textSize="16sp" />
-
                 <TextView
-                    android:id="@+id/EditLocation"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/textView16"
+                    android:layout_width="42dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/Edit" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    android:text="Type"
+                    android:textColor="#838080" />
 
                 <Spinner
                     android:id="@+id/spinnerUserType"
-                    android:layout_width="129dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="236dp"
+                    android:layout_height="wrap_content"
                     tools:layout_editor_absoluteX="70dp"
                     tools:layout_editor_absoluteY="545dp" />
 
@@ -206,7 +307,17 @@
             </LinearLayout>
         </LinearLayout>
 
+        <ImageView
+            android:id="@+id/logouticon"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logouticon"
+            app:layout_constraintBottom_toBottomOf="@+id/include3"
+            app:layout_constraintEnd_toEndOf="@+id/include3"
+            app:layout_constraintTop_toTopOf="@+id/include3"
+            app:layout_constraintVertical_bias="0.666" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-</FrameLayout>
+    </ScrollView>
+</LinearLayout>

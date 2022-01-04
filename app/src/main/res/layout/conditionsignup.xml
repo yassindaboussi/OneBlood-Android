@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFf"
     tools:context=".LoginAndSignUp.conditionsignup">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/AllOfPageLogin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
 
     <ImageView
         android:id="@+id/logo5"
@@ -17,19 +28,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icon" />
 
-    <TextView
-        android:id="@+id/titre5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OneBlood"
-        android:textColor="#ff4b00"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo5"
-        app:layout_constraintVertical_bias="0.276" />
+        <TextView
+            android:id="@+id/titre5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OneBlood"
+            android:textColor="#ff4b00"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/imageView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo5"
+            app:layout_constraintVertical_bias="0.276" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -96,4 +107,6 @@
         app:layout_constraintStart_toStartOf="@+id/titre5"
         app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

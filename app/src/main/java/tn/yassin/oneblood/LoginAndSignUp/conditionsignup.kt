@@ -20,8 +20,7 @@ class conditionsignup : AppCompatActivity() {
         iAgreeCheckBox= findViewById(R.id.iAgreeCheckBox)
         btnConditionNext.setOnClickListener {
             if(iAgreeCheckBox.isChecked) {
-                val intent = Intent(this, SignUpPage1::class.java).apply {
-                }
+                val intent = Intent(this, SignUpPage1::class.java).apply {}
                 startActivity(intent)
             }
             else

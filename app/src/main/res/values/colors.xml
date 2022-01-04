@@ -8,8 +8,17 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="colorPrimaryDark">#F8485E</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="redColor">#F8485E</color>
+    <color name="darkRedColor">#FF0000</color>
+
     <color name="enabled_color">#FF000000</color>
     <color name="disabled_color">#DADDE1</color>
 
     <color name="my_spinner_text_color">#808080</color>
+
+    <color name="red">#FA181B</color>
+    <color name="Redfate7">#ff6366</color>
+    <color name="Spotlight">#A6A6A6</color>
 </resources>

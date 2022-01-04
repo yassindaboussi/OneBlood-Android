@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    app:cardBackgroundColor="@android:color/white"
+    android:layout_margin="10dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:id="@+id/carditemNeedy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DADADA"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="362dp"
+                android:layout_height="78dp"
+                android:layout_margin="6dp"
+                android:elevation="9dp"
+                android:src="@drawable/avatar2"
+                app:civ_border_color="#FFF9F9"
+                app:civ_border_width="2dp" />
+
+            <Button
+                android:id="@+id/buttonEditCard"
+                android:layout_width="46dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:text="⚙️" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/datePostNeedy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:gravity="center"
+            android:text="DATE: DATE_HERE"
+            android:textColor="#93989C"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/SituationNeedy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Situation"
+            android:textColor="#596c75" />
+
+        <TextView
+            android:id="@+id/nomNeedy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:text="Name : NAME_HERE"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/user_icon" />
+
+        <TextView
+            android:id="@+id/locationNeedy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:text="LOCATION : LOCATION_HERE"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:drawableStartCompat="@drawable/address_icon" />
+
+        <TextView
+            android:id="@+id/phoneNeedy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:text="NUMERO : NUMERO_HERE"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:drawableStartCompat="@drawable/call_icon" />
+
+        <TextView
+            android:id="@+id/bloodGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:background="@drawable/rounded_edit_text"
+            android:gravity="center"
+            android:text="BloodGroup"
+            android:textColor="#F05223"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

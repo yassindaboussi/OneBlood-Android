@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,139 +7,175 @@
     android:background="#FFFFFf"
     tools:context=".LoginAndSignUp.Login">
 
-    <CheckBox
-        android:id="@+id/cbRememberMe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="29dp"
-        android:buttonTint="#64471e"
-        android:text="Remember Me"
-        android:textColor="#9A9898"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
-        app:layout_constraintStart_toStartOf="parent" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true">
 
-    <EditText
-        android:id="@+id/PasswordLogin"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="43dp"
-        android:background="@drawable/rounded_edit_text"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="  Password"
-        android:inputType="textPassword"
-        android:text="1234567"
-        android:textColor="@color/black"
-        android:textColorHint="#DADDE1"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/cbRememberMe"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EmailLogin" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/AllOfPageLogin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF">
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="319dp"
-        android:text="Sign into your account"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <CheckBox
+                android:id="@+id/cbRememberMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:buttonTint="#64471e"
+                android:text="Remember Me"
+                android:textColor="#9A9898"
+                app:layout_constraintStart_toStartOf="@+id/PasswordLogin"
+                app:layout_constraintTop_toBottomOf="@+id/PasswordLogin" />
 
-    <TextView
-        android:id="@+id/txtForgetPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="238dp"
-        android:text="Forgot password?"
-        android:textColor="#62A4F5"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <EditText
+                android:id="@+id/PasswordLogin"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="19dp"
+                android:background="@drawable/rounded_edit_text"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="  Password"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textColorHint="#DADDE1"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/txtForgetPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/EmailLogin" />
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="135dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="127dp"
-        android:layout_marginTop="49dp"
-        android:layout_marginEnd="127dp"
-        android:layout_marginBottom="51dp"
-        android:background="@drawable/roundedbutton"
-        android:text="Login"
-        android:textColor="#ffff"
-        app:layout_constraintBottom_toTopOf="@+id/btnSignUp"
-        app:layout_constraintEnd_toEndOf="@+id/gifImageView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtForgetPassword" />
+            <ImageView
+                android:id="@+id/showPasswordLogin"
+                android:layout_width="51dp"
+                android:layout_height="31dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/PasswordLogin"
+                app:layout_constraintEnd_toEndOf="@+id/PasswordLogin"
+                app:layout_constraintTop_toTopOf="@+id/PasswordLogin"
+                app:layout_constraintVertical_bias="0.571"
+                app:srcCompat="@drawable/viewpassword" />
 
-    <TextView
-        android:id="@+id/btnSignUp"
-        android:layout_width="0dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="84dp"
-        android:text="@string/DontHaveAccount"
-        android:textColor="#9A9898"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign into your account"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/EmailLogin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gifImageView2" />
 
-    <EditText
-        android:id="@+id/EmailLogin"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="117dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="117dp"
-        android:background="@drawable/rounded_edit_text"
-        android:ems="10"
-        android:gravity="center"
-        android:hint="  Email"
-        android:inputType="textEmailAddress"
-        android:text="yassin@esprit.tn"
-        android:textColor="@color/black"
-        android:textColorHint="#DADDE1"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtForgetPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gifImageView2" />
+            <ProgressBar
+                android:id="@+id/progressbar_login"
+                android:layout_width="97dp"
+                android:layout_height="50dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/Redfate7"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.417" />
 
-    <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gifImageView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="34dp"
-        android:src="@drawable/lottieblood"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include"
-        tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/txtForgetPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="154dp"
+                android:layout_marginEnd="11dp"
+                android:layout_marginBottom="154dp"
+                android:text="Forgot password?"
+                android:textColor="#62A4F5"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/btnSignUp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textView10" />
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/barourapp"
-        android:layout_width="0dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="1dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="135dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="49dp"
+                android:layout_marginBottom="51dp"
+                android:background="@drawable/roundedbutton"
+                android:text="Login"
+                android:textColor="#ffff"
+                app:layout_constraintBottom_toTopOf="@+id/btnSignUp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtForgetPassword" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/btnSignUp"
+                android:layout_width="0dp"
+                android:layout_height="27dp"
+                android:layout_marginBottom="84dp"
+                android:gravity="center"
+                android:text="@string/DontHaveAccount"
+                android:textColor="#9A9898"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <EditText
+                android:id="@+id/EmailLogin"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="68dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="68dp"
+                android:background="@drawable/rounded_edit_text"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="  Email"
+                android:inputType="textEmailAddress"
+                android:text="yassin@esprit.tn"
+                android:textColor="@color/black"
+                android:textColorHint="#DADDE1"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/txtForgetPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gifImageView2" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gifImageView2"
+                android:layout_width="408dp"
+                android:layout_height="177dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="34dp"
+                android:src="@drawable/lottieblood"
+                app:layout_constraintBottom_toTopOf="@+id/textView10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include"
+                tools:ignore="MissingConstraints" />
+
+            <include
+                android:id="@+id/include"
+                layout="@layout/barourapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

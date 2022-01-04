@@ -1,4 +1,4 @@
-package tn.esprit.leagueoflegendrecyclerview.data
+package tn.yassin.oneblood.data
 
 import androidx.annotation.DrawableRes
 

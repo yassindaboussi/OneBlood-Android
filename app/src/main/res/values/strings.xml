@@ -13,7 +13,8 @@
     </string-array>
 
     <string-array name="blood_groups">
-        <item name="a">A+</item>
+        <item name="a_idk">idk</item>
+        <item name="a_positive">A+</item>
         <item name="a_negative">A-</item>
         <item name="b_positive">B+</item>
         <item name="b_negative">B-</item>
@@ -22,5 +23,19 @@
         <item name="ab_positive">AB+</item>
         <item name="ab_negative">AB-</item>
     </string-array>
+
+
+    <string-array name="BloodGroups">
+        <item name="a_positive">A+</item>
+        <item name="a_negative">A-</item>
+        <item name="b_positive">B+</item>
+        <item name="b_negative">B-</item>
+        <item name="o_positive">O+</item>
+        <item name="o_negative">O-</item>
+        <item name="ab_positive">AB+</item>
+        <item name="ab_negative">AB-</item>
+    </string-array>
+
+    <string name="facebook_app_id">5552388318121617</string>
 
 </resources>

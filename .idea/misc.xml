@@ -3,69 +3,47 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Firas/Documents/GitHub/OneBlood/app/src/main/res/layout/home.xml" value="0.13020833333333334" />
-        <entry key="..\:/Users/Firas/Documents/GitHub/OneBlood/app/src/main/res/layout/home_fragment.xml" value="0.3255208333333333" />
-        <entry key="..\:/Users/Firas/Documents/GitHub/OneBlood/app/src/main/res/layout/noconnection.xml" value="0.13020833333333334" />
-        <entry key="..\:/Users/yassin/.gradle/caches/transforms-3/a41f65a1b182ec9e11a9bbe3d48996cb/transformed/appcompat-1.3.1/res/layout/support_simple_spinner_dropdown_item.xml" value="0.1956140350877193" />
-        <entry key="..\:/Users/yassin/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_dropdown_item.xml" value="0.1587719298245614" />
-        <entry key="..\:/Users/yassin/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.1587719298245614" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable-v24/ic_dashboard.xml" value="0.18888888888888888" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable-v24/ic_settings.xml" value="0.19210526315789472" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/EditText.xml" value="0.2064935064935065" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/barourapp.xml" value="0.23072916666666668" />
+        <entry key="..\:/Users/yassin/AppData/Local/Android/Sdk/platforms/android-31/data/res/layout/simple_spinner_item.xml" value="0.16304347826086957" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable-v24/address_icon.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable-v24/call_icon.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable-v24/ic_drop.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable-v24/roundedred.xml" value="0.2484375" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable-v24/user_icon.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/clickedcadre.xml" value="0.2484375" />
         <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/colorcadre.xml" value="0.2484375" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/edittext.xml" value="0.2064935064935065" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/homemenu.xml" value="0.1899122807017544" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/ic_home_foreground.xml" value="0.19444444444444445" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/ic_map_foreground.xml" value="0.19210526315789472" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/ic_search_foreground.xml" value="0.19210526315789472" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/roundedCadre.xml" value="0.19444444444444445" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/roundedbutton.xml" value="0.2074074074074074" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/roundedcadreinsetting.xml" value="0.2064935064935065" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/shake.xml" value="0.2064935064935065" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/font/allerta.xml" value="0.20789473684210527" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/Loactions_single_item.xml" value="0.1956140350877193" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/activity_conditionsignup.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/barourapp.xml" value="0.2" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/blood_groups_item.xml" value="0.15942028985507245" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/conditionsignup.xml" value="0.264" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/cumstomdialog.xml" value="0.1587719298245614" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/customdialog.xml" value="0.2" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/dialogmap.xml" value="0.2" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/donor_fragment.xml" value="0.19210526315789472" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/forgetpassword.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/fragment_find_hospital.xml" value="0.17346014492753623" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/fragment_setting.xml" value="0.2" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/home.xml" value="0.15081521739130435" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/home_fragment.xml" value="0.4" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/homefragment.xml" value="0.264" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/item_donors.xml" value="0.2" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/item_locations.xml" value="0.264" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/item_needly.xml" value="0.2" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/loactions_single_item.xml" value="0.2" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/drawable/roundedcadreinsetting.xml" value="0.2484375" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/activity_auto_login.xml" value="0.18645833333333334" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/addneedy.xml" value="0.4" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/barourapp.xml" value="0.21105072463768115" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/bottom_sheet.xml" value="0.264" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/changeavatar.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/changepassword.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/conditionsignup.xml" value="0.23229166666666667" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/confirmclosecase.xml" value="0.4" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/custom_progress_bar.xml" value="0.2" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/custom_toast.xml" value="0.264" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/deleteneedy.xml" value="0.264" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/detailsneedy.xml" value="0.29737609329446063" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/dialogerror.xml" value="0.264" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/dropdown_item.xml" value="0.15806159420289856" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/forgetpassword.xml" value="0.16304347826086957" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/home.xml" value="0.1272644927536232" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/home_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/item_locations.xml" value="0.4" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/item_needly.xml" value="0.4" />
         <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/login.xml" value="0.264" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/map_fragment.xml" value="0.2" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/needly_fragment.xml" value="0.19210526315789472" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/pfffff.xml" value="0.264" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/pop_up.xml" value="0.176" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/popup.xml" value="0.264" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/popupdialog.xml" value="0.264" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/progress.xml" value="0.15" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/search_fragment.xml" value="0.1956140350877193" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/map_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/optionsharepopup.xml" value="0.2" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/optionspopup.xml" value="0.264" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/row_item.xml" value="0.1272644927536232" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/search_fragment.xml" value="0.2" />
         <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/setting_fragment.xml" value="0.264" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/setting_fragmentttttttttttttttttttttttttttttttttttttt.xml" value="0.1587719298245614" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/signup.xml" value="0.2" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/signup_page1.xml" value="0.1824561403508772" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/signup_page2.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/simple.xml" value="0.1587719298245614" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/splashscreen.xml" value="0.17753623188405798" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/menu/bottom_nav_menu.xml" value="0.23229166666666667" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/menu/menu.xml" value="0.18020833333333333" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/menu/menulogin.xml" value="0.21458333333333332" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/mipmap-anydpi-v26/ic_map.xml" value="0.19210526315789472" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/mipmap-anydpi-v26/ic_map_round.xml" value="0.12631578947368421" />
-        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/mipmap-anydpi-v26/ic_search.xml" value="0.12631578947368421" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/showdetails.xml" value="0.4" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/signup_page1.xml" value="0.1222879684418146" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/signup_page2.xml" value="0.2" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/splashscreen.xml" value="0.19114583333333332" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/layout/updateneedy.xml" value="0.264" />
+        <entry key="..\:/Users/yassin/Desktop/OneBlood/app/src/main/res/menu/menu_item.xml" value="0.23229166666666667" />
       </map>
     </option>
   </component>
@@ -74,12 +52,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.1" />
-      </ProjectState>
-    </option>
   </component>
 </project>

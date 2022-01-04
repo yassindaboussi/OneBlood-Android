@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="391dp"
+        android:layout_height="541dp"
+        app:cardCornerRadius="35dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="9dp"
+        tools:layout_editor_absoluteY="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="544dp"
+            android:background="@drawable/roundedcadre"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toStartOf="@+id/button3"
+                app:layout_constraintStart_toStartOf="@+id/button3">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout11"
+                    android:layout_width="224dp"
+                    android:layout_height="269dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/DetailsShareNeedy"
+                    app:layout_constraintStart_toEndOf="@+id/linearLayout7"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                    <TextView
+                        android:id="@+id/DetailsBlood"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_margin="11dp"
+                        android:background="@drawable/roundedcadre"
+                        android:gravity="center"
+                        android:text="Contact"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/DetailsFullName"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_margin="11dp"
+                        android:background="@drawable/roundedcadre"
+                        android:gravity="center"
+                        android:text="Contact"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/DetailsHospitalLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_margin="11dp"
+                        android:background="@drawable/roundedcadre"
+                        android:gravity="center"
+                        android:text="Contact"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/DetailsPhoneNeedy"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_margin="11dp"
+                        android:background="@drawable/roundedcadre"
+                        android:gravity="center"
+                        android:text="Contact"
+                        android:textColor="#000000"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/ligneSSs3"
+                    android:layout_width="148dp"
+                    android:layout_height="7dp"
+                    android:layout_marginStart="120dp"
+                    android:background="#3A3A3A"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="396dp"
+                    android:layout_height="175dp"
+                    app:srcCompat="@drawable/detailsneedy"
+                    tools:layout_editor_absoluteY="36dp" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout7"
+                    android:layout_width="98dp"
+                    android:layout_height="269dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/DetailsCallNeedy"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="9dp"
+                        android:background="@drawable/roundedcadre"
+                        app:srcCompat="@drawable/bloodtype" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="9dp"
+                        android:background="@drawable/roundedcadre"
+                        app:srcCompat="@drawable/userdetails" />
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="9dp"
+                        android:background="@drawable/roundedcadre"
+                        app:srcCompat="@drawable/placeholder" />
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="70dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="9dp"
+                        android:background="@drawable/roundedcadre"
+                        app:srcCompat="@drawable/smartphone" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/CloseDetailsNeed"
+                    android:layout_width="38dp"
+                    android:layout_height="31dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:srcCompat="@drawable/close"
+                    tools:layout_editor_absoluteY="5dp" />
+
+                <LinearLayout
+                    android:layout_width="391dp"
+                    android:layout_height="41dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:id="@+id/DetailsCallNeedy"
+                        android:layout_width="194dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/Redfate7"
+                        android:gravity="center"
+                        android:text="Call"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/DetailsShareNeedy"
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:background="#15C39A"
+                        android:gravity="center"
+                        android:text="Share"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</ScrollView>

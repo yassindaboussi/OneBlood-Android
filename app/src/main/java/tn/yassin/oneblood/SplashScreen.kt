@@ -12,7 +12,7 @@ class SplashScreen : AppCompatActivity() {
         setContentView(R.layout.splashscreen)
 
         Handler().postDelayed({
-            val intent = Intent(this, Login::class.java)
+            val intent = Intent(this, AutoLogin::class.java)
             startActivity(intent)
             finish()
         }, 3000) // 3000 ms = 3 Seconde
