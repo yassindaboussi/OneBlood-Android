@@ -19,5 +19,4 @@ OneBlood 🩸 is an Application for Mobile 📱 devices, designed to bring blood
 </p>
 
 
-
 <p align="center">(<a href="#top">back to top</a>)</p>
