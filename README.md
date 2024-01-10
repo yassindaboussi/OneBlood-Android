@@ -5,6 +5,7 @@ OneBlood 🩸 is an Application for Mobile 📱 devices, designed to bring blood
 <br/>
 😇"Our goal is to save people's lives"😇<br/>
 
+*Note: The following screenshots provide only a subset for a quick overview. Not all screenshots are included here. More images are available, showcasing various features and aspects of the Discovery app. You can explore the complete set of screenshots by [contacting me](mailto:yassin.daboussi@esprit.tn) or by checking the project directly.*
 
 <p align=center>
     <div align="center">
